@@ -1,0 +1,145 @@
+body {
+	background: rgb(15,232,146);
+	background: radial-gradient(circle, rgb(171, 232, 15) 0%, rgb(11, 186, 11) 31%, rgb(30, 8, 153) 100%);
+  }
+  
+  /* Стили для всех кнопок и кнопки кликера */
+  .button, .clicker {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	outline: none;
+	border: none;
+	background-color: #FFFFFF;
+	transition: box-shadow 0.3s, background-color 0.3s;
+  }
+  
+  .button:hover, .clicker:hover {
+	box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(15, 15, 15, 0.15);
+  }
+  
+  .button:active, .clicker:active {
+	transition: box-shadow 0.15s, background-color 0.1s;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3), 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+	background-color: #F0F0F0;
+  }
+  
+  .button {
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	left: 87%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .button:disabled {
+	background-color: #B3B3B3;
+  }
+  
+  #b1 { top: 22%; }
+  #b2 { top: 32%; }
+  #b3 { top: 42%; }
+  #b4 { top: 52%; }
+  #b5 { top: 62%; }
+  
+  .button:enabled {
+	background-color: yellowgreen;
+  }
+  
+  .clicker {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.3s, height 0.3s;
+  }
+  
+  .clicker:hover {
+	width: 225px;
+	height: 225px;
+  }
+  
+  .clicker:active {
+	transform: translate(-50%, -50%) scale(0.95);
+  }
+  
+  #money {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	margin-left: 4px;
+	color: #FFFFFF;
+	font-size: 50px;
+  }
+  
+  /* Стили для модального окна */
+.modal {
+	display: none; /* Скрыто по умолчанию */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	}
+	
+	.modal-content { /*окно регистрации*/
+	background-color: #ffffff86;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 300px;
+	text-align: center;
+	border-radius: 0px 0px 25px 25px;/*закругление углов*/
+	}
+	
+	.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	}
+	
+	.close:hover, /*кнопка "выйти" или крестик*/
+	.close:focus {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+	}
+	
+	#auth-form input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	}
+	
+	#auth-form button {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0;
+	cursor: pointer;
+	}
+	.username-display {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 24px;
+		color: white;
+		z-index: 1000;
+	  }
+	  
+	  @media (max-width: 600px) {
+		.username-display {
+		  font-size: 18px; /* Уменьшаем размер текста на мобильных устройствах */
+		  top: 5px; /* Уменьшаем отступ сверху */
+		}
+	  }
